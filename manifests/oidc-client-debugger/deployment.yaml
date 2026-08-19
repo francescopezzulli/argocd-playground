@@ -37,7 +37,7 @@ spec:
     spec:
       containers:
         - name: oidc-client-debugger-git
-          image: image-registry.openshift-image-registry.svc:5000/francesco-onboarding/oidc-client-debugger-git@sha256:b8776fb69d276f867839f50b1e45b92c21d79ead6e4ac49d33ad5d6f39b777ca
+          image: image-registry.openshift-image-registry.svc:5000/francesco-onboarding/oidc-client-debugger-git:latest
           ports:
             - containerPort: 8080
               protocol: TCP

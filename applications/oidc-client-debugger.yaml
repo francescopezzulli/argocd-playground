@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: oidc-client-debugger
-  namespace: openshift-gitops
+  namespace: francesco-onboarding
 spec:
   project: default
   source:
