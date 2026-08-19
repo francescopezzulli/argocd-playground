@@ -13,11 +13,7 @@ spec:
   selector:
     app: oidc-client-debugger-git
   ports:
-    - name: 8080-tcp
-      port: 8080
-      targetPort: 8080
-      protocol: TCP
-    - name: 8443-tcp
-      port: 8443
-      targetPort: 8443
+    - name: 9000-tcp
+      port: 9000
+      targetPort: 9000
       protocol: TCP

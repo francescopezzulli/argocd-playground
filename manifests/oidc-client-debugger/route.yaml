@@ -15,7 +15,7 @@ spec:
     name: oidc-client-debugger-git
     weight: 100
   port:
-    targetPort: 8080-tcp
+    targetPort: 9000-tcp
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect
