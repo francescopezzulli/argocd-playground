@@ -2,6 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: oidc-client-debugger-git
+  namespace: francesco-onboarding
   labels:
     app: oidc-client-debugger-git
     app.kubernetes.io/component: oidc-client-debugger-git
@@ -14,7 +15,7 @@ spec:
     name: oidc-client-debugger-git
     weight: 100
   port:
-    targetPort: 9000-tcp
+    targetPort: 8080-tcp
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Redirect

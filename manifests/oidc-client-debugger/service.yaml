@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: oidc-client-debugger-git
+  namespace: francesco-onboarding
   labels:
     app: oidc-client-debugger-git
     app.kubernetes.io/component: oidc-client-debugger-git
@@ -12,7 +13,11 @@ spec:
   selector:
     app: oidc-client-debugger-git
   ports:
-    - name: 9000-tcp
-      port: 9000
-      targetPort: 9000
+    - name: 8080-tcp
+      port: 8080
+      targetPort: 8080
+      protocol: TCP
+    - name: 8443-tcp
+      port: 8443
+      targetPort: 8443
       protocol: TCP

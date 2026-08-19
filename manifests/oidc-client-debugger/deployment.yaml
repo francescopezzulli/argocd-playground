@@ -2,13 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: oidc-client-debugger-git
+  namespace: francesco-onboarding
   annotations:
-    alpha.image.policy.openshift.io/resolve-names: '*'
     app.openshift.io/route-disabled: 'false'
     app.openshift.io/vcs-ref: ''
     app.openshift.io/vcs-uri: https://github.com/francescopezzulli/oidc-client-debugger.git
-    image.openshift.io/triggers: >-
-      [{"from":{"kind":"ImageStreamTag","name":"oidc-client-debugger-git:latest","namespace":"francesco-onboarding"},"fieldPath":"spec.template.spec.containers[?(@.name==\"oidc-client-debugger-git\")].image","paused":false}]
   labels:
     app: oidc-client-debugger-git
     app.kubernetes.io/component: oidc-client-debugger-git
