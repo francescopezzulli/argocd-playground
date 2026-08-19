@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: oidc-client-debugger-git
+  labels:
+    app: oidc-client-debugger-git
+    app.kubernetes.io/component: oidc-client-debugger-git
+    app.kubernetes.io/instance: oidc-client-debugger-git
+    app.kubernetes.io/name: oidc-client-debugger-git
+    app.kubernetes.io/part-of: oidc-client-debugger-git-app
+spec:
+  to:
+    kind: Service
+    name: oidc-client-debugger-git
+    weight: 100
+  port:
+    targetPort: 9000-tcp
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
